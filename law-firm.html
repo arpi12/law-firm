@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html>
+<head>
+	   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	   <meta charset="UTF-8">
+      <style>
+		html,body
+		{
+			width: 100%;
+			height: 100%;
+			margin: 0px;
+			padding: 0px;
+			overflow-x: hidden; 
+		  }
+           footer {
+           background-color:#555 ;
+           padding: 5px;
+		   height: auto;
+		   overflow: auto;
+          }
+           .navbar {
+            margin-bottom:;
+            border-radius:;
+			background-color:#7095a5;
+           
+          }
+            .carousel-inner img {
+			align:center;
+             width: 150px;
+             min-height:200px;
+             
+        }  
+             .jumbotron {
+              background-color: ;
+              color: ;
+              padding: 5px 8px;
+              
+          }
+             .button {
+              background-color: #7095a5;
+              border: none;
+              color: white;
+              padding: 5px 22px;
+              text-align: center;
+              text-decoration: none;
+              display: inline-block;
+              font-size: 16px;
+              margin: 4px 2px;
+              cursor: pointer;
+           }
+
+           .button1 {border-radius:35px;border: 3px solid white}
+           .button2 {border-radius: 2px; }
+               
+          #contact {
+                 padding:50px;
+                  background-image: url("img16.png");
+               }
+          #pricing {
+                  padding:50px;
+                  background:#262626;
+              }
+          #experience {
+                    padding:50px;
+                   background-image: url("img16.png");
+               }
+           #mission {
+                  padding:70px;
+                  background:#262626;
+              }
+           #case {
+                    padding:70px;
+                   background-image: url("img16.png");
+              }
+           #home {
+                   padding:300px;
+                   background-image:url("home.jpg");
+                   }
+		  i{
+			color:red;
+		  }
+       </style>
+	   <script>
+			function validate()
+			{
+				//step1: fetch all values from textboxes
+				var name=document.getElementById("fname").value;
+				var phone=document.getElementById("phone").value;
+				var email=document.getElementById("email").value;
+				var status=true;
+				
+				//step2:used to remove the spaces if given by the user
+				name=name.trim();
+				phone=phone.trim();
+				email=email.trim();
+				
+				//step3:check if respective variable is blank 
+				//if it is blank then give the border color of respective textbox to red 
+				//else to green
+				if(name=="")
+				{
+					status=false;
+					document.getElementById("fname").style.borderColor="red";
+					document.getElementById("nameerror").innerHTML="invalid name Name can't be blank";
+				}
+				else
+				{
+					document.getElementById("fname").style.borderColor="green";
+					document.getElementById("nameerror").innerHTML="";
+				}
+				//--------------------------------------------------------------------------
+				if(email=="")
+				{	
+					status=false;
+					document.getElementById("email").style.borderColor="red";
+					document.getElementById("emailerror").innerHTML="invalid email Email can't be blank";
+				}
+				else
+				{
+					document.getElementById("email").style.borderColor="green";
+					document.getElementById("emailerror").innerHTML="";
+				}
+				//-----------------------------------------------------------------------
+				if(email=="")
+				{	
+					status=false;
+					document.getElementById("phone").style.borderColor="red";
+					document.getElementById("phoneerror").innerHTML="invalid Phone no Phone no can't be blank";
+				}
+				else
+				{
+					document.getElementById("phone").style.borderColor="green";
+					document.getElementById("phoneerror").innerHTML="";
+				}
+				return status;
+			}
+	   </script>
+   </head>
+  <body> 
+		<footer class="container-fluid">
+              <div class="col-sm-2"></div>
+              <div class="col-sm-7">
+              <p5 style="color:#7095a5"><small>-Law firm-</small></p5>
+              <p5 style="color:white"><small>responsive law template</small></p5></div>
+              <div class="col-sm-3">
+					<i class="fa fa-facebook-official" style="font-size:15px;color:blue"></i>
+					<i class="fa fa-twitter-square" style="font-size:15px;color:skyblue"></i>
+					<i class="fa fa-google-plus-square" style="font-size:15px;color:red"></i> 
+					<i class="fa fa-linkedin-square" style="font-size:15px;color:white"></i> 
+					<i class="fa fa-youtube-play" style="font-size:15px;color:red"></i>
+			  </div>
+		</footer>
+		<div class="text-center">
+        <div class="row">
+               <div class="col-sm-2"></div>
+               <div class="col-sm-2">
+                      <h3 style="color:#7095a5;"><img src="web2img.jpg" height="70" width="60"  alt="Image">
+					  <b>LAW FIRM</b> </h3>
+                </div><br>
+                <div class="col-sm-2">
+                       <p5><i class="material-icons" style="font-size:18px;color:#7095a5">access_time</i>Mon-Sat 9.00-18.00<br></p5>
+                       <p5 style="color:#7095a5">Sunday Closed</p5>
+				</div>
+                <div class="col-sm-2">
+                       <p5><i class="material-icons"  style="font-size:18px;color:#7095a5">call</i>(+7)1-811-234-5678<br>(+7)1-811-234-5679</p5>
+				</div>
+				<div class="col-sm-2">
+                        <p5><i class="material-icons"  style="font-size:18px;color:#7095a5">place</i>199 ParkAve,SanJose,CA<br>95110,United States</p5>
+				</div>
+         </div>
+                 <div class="col-sm-2"></div>
+				 <div class="col-sm-8">
+					   <nav class="navbar">
+						  <div class="container-fluid">
+							 <ul class="nav navbar-nav">
+							  <li class="active"><a href="#" style="color:white">HOME</a></li>
+							  <li><a href="#about" style="color:white">ABOUT</a></li>
+							  <li><a href="#service" style="color:white">SERVICES</a></li>
+							  <li><a href="#pricing" style="color:white">PRICING</a></li>
+							  <li><a href="#contact" style="color:white">CONTACT</a></li>
+							</ul>
+							<!--button triggar model-->
+								<p align="right">
+								<button  type="button" class="btn btn-warning" data-toggle="modal"  data-target="#signup" style="margin-top:8px">
+								<span class="glyphicon glyphicon-user"  style="color:white"></span>
+								Sign Up
+								</button>
+								<a href="#" data-toggle="modal" data-target="#login" class="btn btn-warning" style="margin-top:8px">
+								<span class="glyphicon glyphicon-log-in"  style="color:white"></span>
+								login
+								</a>
+								</p>
+
+								  
+							<!-- Modal -->
+							<div class="modal fade" id="signup" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" data-keyboard="false" data-backdrop="static">
+							  <div class="modal-dialog" role="document">
+								<div class="modal-content">
+								  <div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+									<h4 class="modal-title" id="myModalLabel">Sign Up</h4>
+								  </div>
+								  <div class="modal-body">
+									<div class="row">
+										<div class="col-sm-6">
+											<input type="text" class="form-control" placeholder="Enter Name">
+										</div>
+										<div class="col-sm-6">
+											<input type="text" class="form-control" placeholder="Mobile No">
+										</div>
+									</div>
+										<br>
+									<div class="row">
+										<div class="col-sm-6">
+											<input type="text" class="form-control" placeholder="Enter Email">
+										</div>
+										<div class="col-sm-6">
+											<input type="password" class="form-control" placeholder="Password">
+										</div>
+									</div>
+										<br>
+										<div class="row">
+											<div class="col-sm-12">
+												<textarea class="form-control" placeholder="Enter Address"></textarea>
+											</div>
+										</div>
+									
+								  </div>	<!--body end--->
+								  <div class="modal-footer">
+								  
+									<center>
+									<button type="button" class="btn btn-primary">Register</button>
+									<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+									<hr>
+									<a href="#" data-dismiss="modal" data-toggle="modal" data-target="#login">Login</a>
+									</center>
+								  </div>
+								</div>
+							  </div>
+							</div>
+							<!--login modal start here-->
+							<div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" data-keyboard="false" data-backdrop="static">
+							  <div class="modal-dialog modal-sm" role="document">
+								<div class="modal-content">
+								  <div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+									<h4 class="modal-title" id="myModalLabel">Login</h4>
+								  </div>
+								  <div class="modal-body">
+									<div class="form-group">
+										<label>e-mail</label>
+										<input type="text" class="form-control input-sm">
+									</div>
+									<div class="form-group">
+										<label>password</label>
+										<input type="password" class="form-control input-sm">
+									</div>
+								  </div>
+								  <div class="modal-footer">
+								  <center>
+									 <button type="button" class="btn btn-primary">Login</button>
+									 
+									<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+									<hr>
+									New User?
+									<a href="#" data-dismiss="modal" data-toggle="modal" data-target="#signup">Register</a>
+								   </center>
+								  </div>
+								</div>
+							  </div>
+							</div>
+					   </nav>
+					</div>
+				  </div>
+                  <br>
+                      
+                  <div id="home">
+                  <div class="row">
+                       <div class="col-sm-7">
+							  <h1 style="color:white"><b>Let Our Experience be </b></h1>
+						</div>
+							  <h1 style="color:#7095a5"><b> Your Guide.</b></h1>
+				   </div>
+                   <div class="text-center">
+                         <div class="col-sm-9">
+							  <p4 style="color:white">Loreum ipsum dolor sit amet,consectetuer adipscing elit,sed diam nonummy</p4><br>
+							  <p4 style="color:white">nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat</p4>
+						 </div>
+                    </div>
+                    </div> <!--------home end---------->
+                    </div>
+				  <div class="row">
+						<div class="col-sm-2"></div>
+						<div class="col-lg-4" style="background-color:#262626"><br><br>
+							<h4 style="color:white"><i class="fa fa-hand-o-right" style="font-size:24px"></i>&nbsp;&nbsp;NEED LEGAL SERVICES?</h4>
+							<br><br>
+						</div>
+						<div class="col-lg-4" style="background-color:#7095a5"><br>
+							<h5 style="color:white">Call now(+7)1-811-234-5678 <br><br>Email us at:info@mail.com</h5><br><br></div>
+						</div>
+								<br><br><br>
+				 <div class="text-center">
+							<h3 id="about"><b><u>OUR STORY</u></b></h3></div>
+                 </div><br><br><br>
+                 <div class ="row">
+                        <div class="col-sm-2"></div>
+                        <div class="col-sm-3">
+                              <img src="img1.png" height="250" width="280"  alt="Image">
+						</div>
+                        <div class="col-sm-5">
+                               <p1>Loreum ipsum dolor sit amet,consectetuer adipscing elit,sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.Ut wisi enim ad minim veniam,quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.Duis autem vel eum iriure dolor in hendrerit invulputate velit esse molstie consequat </p1><br><br>
+                               <p1><em>"Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazin placerat facer assum.Typi non habent claritatem insitam;est usus legentis in iis qui facit eorum claritatem"</em></p1><br><br>
+							   <p1>Marium est notare quam littera gothica,quam nunc putamus parum claram,anteposuerit litterarum forms humanitatis per seacula quarta decima et quinta decima.Eodem modo typi,qui nunc nobis videntur parum clari,fiant sollemnes in futurum.</p1></div>
+                        <div class="col-sm-2"></div>
+                   </div>   
+                <br><br><br><br>
+				
+				<div id="mission">
+                <div class="text-center">
+							<h3 style="color:white"><b><u>OUR MISSION</u></b></h3></div>
+                            <br><br><br>
+                <div class ="row">
+						<div class="col-sm-2"></div>
+                        <div class="col-sm-5">
+                             <p1  style="color:#bfbfbf">Loreum ipsum dolor sit amet,consectetuer adipscing elit,sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.Ut wisi enim ad minim veniam,quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.Duis autem vel eum iriure dolor in hendrerit invulputate velit esse molstie consequat </p1><br><br>
+                             <p1 style="color:#7095a5;"><em>"Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazin placerat facer assum.Typi non habent claritatem insitam;est usus legentis in iis qui facit eorum claritatem"</em></p1><br><br>
+						</div>
+                        <div class="col-sm-3">
+							<img src="img2.png" height="250"width="280"alt="Image">
+						</div>
+                        <div class="col-sm-2"></div>
+                </div>
+                </div>   <!------------mission end----->
+                        
+				<div id="experience">
+                       <div class="text-center">
+                             <h3 style="color:white"><b>Experience you need.Results you want</b></h3>
+						</div>
+                        <div class="text-center">
+                             <p3 style="color:white"><em>-Law Firm Services-</em></p3>
+						</div>
+				</div> <!--------experience end------->
+                <br><br><br><br>
+				
+                <div class="text-center">
+                         <h3><b><u>OUR TEAM</u></b></h3></div>
+                         <br>
+                         <div class="row">
+                              <div class="col-sm-2"></div>
+                              <div class="col-sm-8">
+                                    <p>Loreum ipsum dolor sit amet,consectetuer adipscing elit,sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat</p>
+							  </div>
+                              <div class="col-sm-3"></div>
+                              <div class="col-sm-6">
+                                    <p>volutpat.Ut wisi enim ad minim veniam,quis nostrud exerci tation ullamcorper suscipit </p></div>
+                                   <br><br><br><br>
+                         <div class="row">
+                               <div class="col-sm-3"></div>
+                               <div class="col-sm-2">
+                                    <img src="img1.png" height="200" width="180"  alt="Image">
+                                    <h4>Koosakool Doe</h4>
+                                    <p4  style="color:#7095a5"><em>-Manager</em></p4><br>
+									<p5>Aliquam quis lobortis lorem,quismalesuda velt.Praesent pharetra eget arcu et tempus ut diam lorem.</p5>
+                               </div>
+                               <div class="col-sm-2">
+                                    <img src="img3.png" height="200" width="180"  alt="Image">
+                                    <h4>Jantima Doe</h4>
+									<p4  style="color:#7095a5"><em>-Senior Associate</em></p4><br>
+									<p5>Aliquam quis lobortis lorem,quismalesuda velt.Praesent pharetra eget arcu et tempus ut diam lorem.</p5>
+                               </div>
+                               <div class="col-sm-2">
+									<img src="img4.png" height="200" width="180"  alt="Image">
+                                    <h4>Chutima Doe</h4>
+                                    <p4  style="color:#7095a5"><em>-Senior Counsel</em></p4><br>
+                                    <p5>Aliquam quis lobortis lorem,quismalesuda velt.Praesent pharetra eget arcu et tempus ut diam lorem.</p5>
+                                </div>
+                                <div class="col-sm-3"></div>
+                           </div>
+                                    <br><br>
+						   <div class="row">
+                                <div class="col-sm-3"></div>
+                                <div class="col-sm-2">
+									<img src="img5.png" height="200" width="180"  alt="Image">
+									<h4> Adam Doe</h4>
+                                    <p4 style="color:#7095a5"><em>-Senior Partner</em></p4><br>
+                                    <p5>Aliquam quis lobortis lorem,quismalesuda velt.Praesent pharetra eget arcu et tempus ut diam lorem.</p5>
+                                </div>
+                                <div class="col-sm-2">
+									<img src="img6.png" height="200" width="180"  alt="Image">
+                                    <h4>Nicole Doe</h4>
+                                    <p4 style="color:#7095a5"><em>-Partner</em></p4><br>
+									<p5>Aliquam quis lobortis lorem,quismalesuda velt.Praesent pharetra eget arcu et tempus ut diam lorem.</p5>
+                                </div>
+								<div class="col-sm-2">
+									<img src="img7.png" height="200" width="180"  alt="Image">
+                                    <h4>Bryan Doe</h4>
+									<p4 style="color:#7095a5"><em>-Associate</em></p4><br>
+                                    <p5>Aliquam quis lobortis lorem,quismalesuda velt.Praesent pharetra eget arcu et tempus ut diam lorem.</p5>
+                                </div>
+                                <div class="col-sm-3"></div>
+                           </div>
+                         <br><br><br><br>
+				
+					<div id="case">
+					<div class="row">
+							<div class="col-sm-3"></div>
+							<div class="col-sm-2">
+                               <h4 style="color:white"><i class="fa fa-balance-scale" style="font-size:20px;color:white"></i><b>50</b></h4>
+							   <p5  style="color:white"><em>Years of Experience</em></p5>
+							</div>
+                            <div class="col-sm-2">
+                               <h4  style="color:white"><i class="fa fa-user-circle-o" style="font-size:20px;color:white"></i><b>984</b></h4>
+                               <p5  style="color:white"><em>Satisfied Clients</em></p5>
+							</div>
+                            <div class="col-sm-2">
+                                <h4  style="color:white"><i class="fa fa-diamond" style="font-size:20px;color:white"></i><b>2,450</b></h4>
+                                <p5  style="color:white"><em>Cases Won</em></p5>
+							</div>
+                            <div class="col-sm-2">
+								<h4  style="color:white"><i class="fa fa-users" style="font-size:20px;color:white"></i><b>4,505</b></h4>
+                                <p5  style="color:white"><em>Number of Lawyers</em></p5>
+							</div>
+                            <div class="col-sm-2"></div>
+                     </div>
+					 </div> <!------case end----->
+                 <br><br><br><br>
+				 <div class="text-center">
+								<h3 id="service"><b><u>OUR SERVICES</u></b></h3></div>
+                 </div> <br><br><br>
+                 <div class="row">
+                          <div class="col-sm-2"></div>
+                          <div class="col-sm-3">
+                                <img src="img8.png" height="200" width="250"  alt="Image">
+                                <h4  style="color:#7095a5">Insurance Law</h4>
+                                <p5>Aliquam quis lobortis lorem,quismalesuda velt.Praesent pharetra eget arcu et tempus ut diam lorem.</p5>
+						  </div>
+                          <div class="col-sm-3">
+                                <img src="img9.png" height="200" width="250"  alt="Image">
+                                <h4  style="color:#7095a5">Advertising Law</h4>
+                                <p5>Aliquam quis lobortis lorem,quismalesuda velt.Praesent pharetra eget arcu et tempus ut diam lorem.</p5>
+                         </div>
+                         <div class="col-sm-3">
+                                <img src="img10.png" height="200" width="250"  alt="Image">
+                                <h4  style="color:#7095a5">Education Law</h4>
+                                <p5>Aliquam quis lobortis lorem,quismalesuda velt.Praesent pharetra eget arcu et tempus ut diam lorem.</p5>
+                         </div>
+                         <div class="col-sm-2"></div>
+                  </div>
+					<br><br>
+				 <div class="row">
+						<div class="col-sm-2"></div>
+                        <div class="col-sm-3">
+								<img src="img11.png" height="200" width="250"  alt="Image">
+								<h4 style="color:#7095a5">Real Estate Law</h4>
+								<p5>Aliquam quis lobortis lorem,quismalesuda velt.Praesent pharetra eget arcu et tempus ut diam lorem.</p5>
+						</div>
+                        <div class="col-sm-3">
+                               <img src="img12.png" height="200" width="250"  alt="Image">
+                                <h4 style="color:#7095a5">Labour & Employeement Law</h4>
+                                <p5>Aliquam quis lobortis lorem,quismalesuda velt.Praesent pharetra eget arcu et tempus ut diam lorem.</p5>
+						</div>
+                        <div class="col-sm-3">
+								<img src="img13.png" height="200" width="250"  alt="Image">
+								<h4 style="color:#7095a5">Business Litigation</h4>
+								<p5>Aliquam quis lobortis lorem,quismalesuda velt.Praesent pharetra eget arcu et tempus ut diam lorem.</p5>
+						</div>
+                        <div class="col-sm-2"></div>
+                 </div>
+					<br><br><br><br>
+				 <div class="jumbotron">
+                 <div class="text-center"> 
+                              <h3><b><u>WHY CHOOSE US</u></b></h3></div>
+					<br><br><br>
+                 <div class="row">
+                     <div class="col-sm-2"></div>
+                     <div class="col-sm-4">
+                               <h5 style="color:#7095a5"><i class="fa fa-check"style="font-size:20px;color:#7095a5"></i><b>Professional Lawyers</b></h5>
+                               <p5>Loreum ipsum dolor sit amet,consectetuer adipscing elit,sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.Ut wisi enim ad minim veniam,quis nostrud exerci tation</p5>
+                               <h5 style="color:#7095a5"><i class="fa fa-check"style="font-size:20px;color:#7095a5"></i><b>Law Firm of the Year</b></h5>
+                               <p5>Loreum ipsum dolor sit amet,consectetuer adipscing elit,sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.Ut wisi enim ad minim veniam,quis nostrud exerci tation</p5>
+                               <h5 style="color:#7095a5"><i class="fa fa-check"style="font-size:20px;color:#7095a5"></i><b>50 Years of Experience</b></h5>
+                               <p5>Loreum ipsum dolor sit amet,consectetuer adipscing elit,sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.Ut wisi enim ad minim veniam,quis nostrud exerci tation</p5></div>
+                      <div class="col-sm-4">
+                                <img src="img14.png" height="250" width="350"  alt="Image"></div>
+                      </div><br><br><br>
+                           
+                  <div id="pricing">
+                  <div class="text-center"> 
+							   <h3 id="price" style="color:white"><b><u>PRICING</u></b></h3>
+				  </div>
+                  <br><br><br>
+                  <div class="row">
+                     <div class="col-sm-2"></div>
+                     <div class="col-sm-2">
+                             <div class="panel panel-default text-center">
+                                    <div class="panel-heading">
+                                            <h4><b>MONTHLY</b></h4>
+									</div> <!----panel heading end--->
+                                    <div class="panel-body" style="background:#7095a5">
+                                            <h3 style="color:white">$99</h3>
+                                    </div> <!-----panel body end------>
+                                    <div class="panel-footer">
+                                            <p3>Lorem ipsum dolor</p3>
+                                            <p3>Consectetuer adipiscing</p3>
+                                            <p3>Aenean commodo</p3>
+                                            <p3>Aenean massa.</p3>
+                                            <p3>Cum sociis natoque</p3>
+                                            <p3>Penatibus et</p3>
+                                            <p3>Magnis dis</p3><br><br>
+                                            <button class="btn btn-sm">BUY NOW</button>
+									</div> <!----panel footer end--->
+						     </div> <!----panel end--->
+					 </div> <!--col-sm-2 end----->
+					 <div class="col-sm-2">
+                             <div class="panel panel-default text-center">
+                                    <div class="panel-heading">
+                                            <h4><b>6 MONTHS</b></h4> 
+									</div> <!----panel heading end--->
+                                    <div class="panel-body"  style="background:#7095a5">
+                                            <h3 style="color:white">$599</h3>
+                                    </div>   <!-----panel body end------>
+                                    <div class="panel-footer">
+                                             <p3>Lorem ipsum dolor</p3>
+                                             <p3>Consectetuer adipiscing</p3>
+                                             <p3>Aenean commodo</p3>
+                                             <p3>Aenean massa.</p3>
+                                             <p3>Cum sociis natoque</p3>
+                                             <p3>Penatibus et</p3>
+                                             <p3>Magnis dis</p3><br><br>
+                                             <button class="btn btn-sm">BUY NOW</button>
+									</div> <!----panel footer end--->
+							 </div> <!----panel end--->
+					</div> <!--col-sm-2 end----->
+                     
+                    <div class="col-sm-2">
+                            <div class="panel panel-default text-center">
+                                   <div class="panel-heading">
+                                             <h4><b>12 MONTHS</b></h4>
+								   </div> <!----panel heading end--->
+                                   <div class="panel-body"  style="background:#7095a5">
+                                             <h3 style="color:white">$799</h3>
+                                   </div> <!----panel body end------>
+                                   <div class="panel-footer">
+                                             <p3>Lorem ipsum dolor</p3>
+                                             <p3>Consectetuer adipiscing</p3>
+                                             <p3>Aenean commodo</p3>
+                                             <p3>Aenean massa.</p3>
+                                             <p3>Cum sociis natoque</p3>
+                                             <p3>Penatibus et</p3>
+                                             <p3>Magnis dis</p3><br><br>
+                                             <button class="btn btn-sm">BUY NOW</button>
+						          </div> <!----panel footer end--->
+							</div> <!----panel end--->
+		            </div> <!--col-sm-2 end----->
+ 
+                    <div class="col-sm-2">
+                           <div class="panel panel-default text-center">
+                                 <div class="panel-heading">
+                                             <h4><b>24 MONTHS</b></h4> 
+								 </div> <!----panel heading end--->
+                                 <div class="panel-body"  style="background:#7095a5">
+                                             <h3 style=color:white>$1,299</h3>
+                                 </div>  <!----panel body end------>
+                                 <div class="panel-footer">
+                                             <p3>Lorem ipsum dolor</p3>
+                                             <p3>Consectetuer adipiscing</p3>
+                                             <p3>Aenean commodo</p3>
+                                             <p3>Aenean massa.</p3>
+                                             <p3>Cum sociis natoque</p3>
+                                             <p3>Penatibus et</p3>
+                                             <p3>Magnis dis</p3><br><br>
+                                             <button class="btn btn-sm">BUY NOW</button>
+								</div> <!----panel footer end--->
+                          </div> <!----panel end--->
+                    </div> <!--col-sm-2 end----->
+                                                                                                       
+                 </div> <!----pricing end------->
+                 </div>
+                 <br><br>
+				 <div class="text-center"> 
+                        <h3><b><u>TESTIMONIALS</u></b></h3>
+				 </div>
+                        <br><br><br>
+                <div class="container-fluid  text-center">
+					 <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                         <ol class="carousel-indicators">
+                               <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                               <li data-target="#myCarousel" data-slide-to="1"></li>
+                               <li data-target="#myCarousel" data-slide-to="2"></li>
+                         </ol>
+				         <div class="carousel-inner" role="listbox">
+							   <div class="item active">
+								     <img src="img15.png" class="img-responsive img-circle margin" alt="image" style="display:inline" width:"150" height:"100"><br><br>
+								     <p>"I am grateful for the hard work and exemplary service provided by your team.They not only helped us organize</p>
+									 <p>and better manage our operations but have provided us to look at our business more strategically." </p>
+									 <h4 style="color:#7095a5"><b>Prommet Doe</b></h4><br><br>
+							  </div>
+							  <div class="item">
+									 <img src="img17.jpg" class="img-responsive img-circle margin" alt="image" style="display:inline" width:"150" height:"100"><br><br>
+									 <p>"I am grateful for the hard work and exemplary service provided by your team.They not only helped us organize</p>
+									 <p>and better manage our operations but have provided us to look at our business more strategically." </p>
+									 <h4 style="color:#7095a5"><b>David</b></h4><br><br>
+							  </div>
+							  <div class="item">
+									<img src="img18.jpg" class="img-responsive img-circle margin" alt="image" style="display:inline" width:"150" height:"100"><br><br>
+									<p>"I am grateful for the hard work and exemplary service provided by your team.They not only helped us organize</p>
+									<p>and better manage our operations but have provided us to look at our business more strategically." </p>
+									<h4 style="color:#7095a5"><b>John Doe</b></h4><br><br>
+							</div>
+					    </div>
+							<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+									<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+									<span class="sr-only">Previous</span>
+							</a>
+							<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+									<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+									<span class="sr-only">Next</span>
+							</a>
+						</div> <!----carousel end---->
+				</div> 
+						<br><br><br>
+				<div id="contact">
+                <div class="text-center">
+                      <h3 style="color:white"><b><u>CONTACT US</u></b></h3>
+			    </div>
+                <br><br><br>
+                <div class="container-fluid  text-center">
+                      <p style="color:#b3b3b3">Loreum ipsum dolor sit amet,consectetuer adipscing elit,sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat</p>
+                      <p  style="color:#b3b3b3">volutpat.Ut wisi enim ad minim veniam,quis nostrud exerci tation ullamcorper suscipit</p><br><br>
+                <div class="container">
+                <div class="row">
+                      <div class="col-sm-3"></div>
+                      <div class="col-sm-3 form-group">
+					  <form action="#" method="POST" onsubmit="return validate()">
+                      <div class="form-group">
+						<div class="row">
+							<div class="col-sm-12">
+								<input type="text" name="fname" id="fname" placeholder="Name*" class="form-control">
+								<i id="nameerror"></i>
+							</div>
+						</div>
+					  </div>
+					  <br>
+					  <div class="form-group">
+						<div class="row">
+							<div class="col-sm-12">
+								<input type="text" name="phone" id="phone" placeholder="Enter Phone Number*" class="form-control">
+								<i id="phoneerror"></i>
+							</div>
+						</div>
+					  </div>
+					  <br>
+					  <div class="form-group">
+						<div class="row">
+							<div class="col-sm-12">
+								<input type="text" name="fname" id="email" placeholder="Enter Email*" class="form-control">
+								<i id="emailerror"></i>
+							</div>
+						</div>
+					  </div>
+					  <br>
+                    <button type="submit" class="button button2 pull-left">SUBMIT</button>
+					 </form>
+					 </div> <!---col-sm-3 end--->
+                     <div class="col-sm-4 form group">
+                            <textarea class="form-control" id="message" name="message" placeholder="Message" rows="7"></textarea>
+					 </div>
+                </div> <!--row end--->
+                </div> <!--container end---->
+                </div> <!---container fluid end-->
+                </div> <!--contact end---->
+                </div> <!-----jumbotron end----->
+				<div>
+                <div class="row">
+                   <div class="col-sm-2"></div>
+                   <div class="col-sm-3">
+                        <h4 style="color:#7095a5"><img src="web2img.jpg" height="70" width="60"  alt="Image">
+						<b>LAW FIRM</b> </h4>
+                        <p5>Loreum ipsum dolor sit amet,consectetuer adipscing elit,sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.Ut wisi enim ad minim veniam,quis nostrud exerci tation</p5></div>
+				   <div class="col-sm-3"><br>
+                        <h5><b>CONTACT INFORMATION</b></h5><br>
+                        <p5><i class="material-icons" style="font-size:15px;color:#7095a5">place</i>199 Park Ave,San Jose,CA 955110,United  States</p5><br><br>
+                        <p5><i class="material-icons" style="font-size:15px;color:#7095a5">call</i>(+7)1-811-234-5678</p5><br>
+                        <p5>(+7)1-811-234-5679</p5><br><br>
+                        <p5><i class="material-icons" style="font-size:15px;color:#7095a5">email</i></p5>
+                        <p5>info@gmail.com</p5>
+                   </div>
+                   <div class=col-sm-2><br>
+						<h5><b>OPENING HOURS</b></h5><br>
+                        <p5><i class="material-icons" style="font-size:15px;color:#7095a5">access_time</i></p5>
+                        <p5>Mon-Fri 9.00-18.00</p5><br>
+                        <p5>Saturday 9.00-18.00</p5><br>
+                        <p5 style="color:#7095a5">Sunday Closed</p5>
+                   </div> 
+                  </div><!----row end-->
+				  </div> <br><br><br>
+                   <footer class="container-fluid">
+                       <div class="col-sm-2"></div>
+                       <div class="col-sm-7">
+                             <p5 style="color:white">2018</p5>
+                             <p5 style="color:#7095a5">Law firm</p5>
+                             <p5 style="color:white">All rights reserved</p5>
+					   </div>
+                       <div class="col-sm-3">
+                             <i class="fa fa-facebook-official" style="font-size:20px;color:blue"></i>
+                             <i class="fa fa-twitter-square" style="font-size:20px;color:skyblue"></i>
+                             <i class="fa fa-google-plus-square" style="font-size:20px;color:red"></i> 
+                             <i class="fa fa-linkedin-square" style="font-size:20px;color:white"></i> 
+                             <i class="fa fa-youtube-play" style="font-size:20px;color:red"></i></div>
+                </footer>
+	</body>
+</html> 
+             
